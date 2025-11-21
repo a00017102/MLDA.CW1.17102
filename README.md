@@ -5,13 +5,12 @@
 This project implements an end-to-end machine learning solution to predict bike rental demand in Seoul, South Korea. The system analyzes hourly bike rental data along with weather conditions and temporal features to forecast demand patterns.
 
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Python 3.12+**
 - **Data Analysis:** Pandas, NumPy, SciPy
 - **Machine Learning:** Scikit-learn
 - **Visualization:** Matplotlib, Seaborn, Plotly
-- **Deployment:** Streamlit
 - **Development:** Jupyter Notebook
 
 ## Setup Instructions
@@ -40,3 +39,28 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
+### Step 1: Train Models (Jupyter Notebook)
+
+Run the Jupyter notebook to perform data analysis and train models:
+
+Execute all cells in order. This will:
+- Load and explore the data
+- Perform preprocessing and feature engineering
+- Train multiple machine learning models
+- Evaluate and compare model performance
+- Save trained models to the `models/` directory
+
+## Machine Learning Models
+
+Three regression algorithms were implemented and compared:
+
+1. **Random Forest Regressor**
+2. **Gradient Boosting Regressor**
+3. **Support Vector Regressor (SVR)**
+
+## Model Evaluation Metrics
+
+- **MAE (Mean Absolute Error)** - Average absolute prediction error
+- **RMSE (Root Mean Squared Error)** - Penalizes large errors
+- **R² Score** - Proportion of variance explained
