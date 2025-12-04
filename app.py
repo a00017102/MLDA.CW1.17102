@@ -92,14 +92,14 @@ with col2:
 
 selected_date = st.date_input(
     "Select Date",
-    value=datetime.date(2018, 7, 16),
+    value=datetime.date.today(),
     min_value=datetime.date(2017, 1, 1),
     max_value=datetime.date(2030, 12, 31)
 )
 year = selected_date.year
 month = selected_date.month
 day = selected_date.day
-day_of_week = selected_date.weekday()  # 0=Monday, 6=Sunday
+day_of_week = selected_date.weekday() 
 is_weekend = 1 if day_of_week >= 5 else 0
 is_working = 1 if (7 <= hour <= 9) or (17 <= hour <= 19) else 0
 temp_hour_interaction = temperature * hour
@@ -108,7 +108,16 @@ weather_comfort = int(
     and rain == 0
     and snow == 0
 )
-season = st.selectbox("Season", ["Autumn", "Spring", "Summer", "Winter"])
+
+if month in [12, 1, 2]:
+    season = "Winter"
+elif month in [3, 4, 5]:
+    season = "Spring"
+elif month in [6, 7, 8]:
+    season = "Summer"
+else:
+    season = "Autumn"
+
 season_map = {
     "Autumn": [1, 0, 0, 0],
     "Spring": [0, 1, 0, 0],
