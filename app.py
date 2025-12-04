@@ -94,7 +94,7 @@ selected_date = st.date_input(
     "Select Date",
     value=datetime.date(2018, 7, 16),
     min_value=datetime.date(2017, 1, 1),
-    max_value=datetime.date(2018, 12, 31)
+    max_value=datetime.date(2030, 12, 31)
 )
 year = selected_date.year
 month = selected_date.month
